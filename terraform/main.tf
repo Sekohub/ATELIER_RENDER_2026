@@ -34,7 +34,7 @@ env_vars = {
     value = "production"
   }
     DATABASE_URL = {
-      value = postgresql://app_user:aBiUsdJsCGmhYJfRsKxbAQE8d1GJLVGJ@dpg-d76hldmslomc738ivps0-a/app_db_6sb9
+      value = var.postgresql://app_user:aBiUsdJsCGmhYJfRsKxbAQE8d1GJLVGJ@dpg-d76hldmslomc738ivps0-a/app_db_6sb9
     }
   }
 
