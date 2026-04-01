@@ -17,12 +17,6 @@ variable "github_actor" {
   type        = string
 }
 
-env_vars = {
-  ENV = {
-    value = "production"
-  }
-}
-
 resource "render_web_service" "flask_app" {
   name   = "flask-render-iac-${var.github_actor}"
   plan   = "free"
