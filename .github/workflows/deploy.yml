@@ -104,4 +104,5 @@ jobs:
             -var="image_url=${IMAGE_URL}" \
             -var="image_tag=${IMAGE_TAG}" \
             -var="github_actor=${ACTOR}"
+            -var="database_url=${{ secrets.DATABASE_URL }}"
         working-directory: terraform
