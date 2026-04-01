@@ -59,6 +59,7 @@ jobs:
       - name: Delete existing Render service if present
         env:
           RENDER_API_KEY: ${{ secrets.RENDER_API_KEY }}
+          TF_VAR_database_url: ${{ secrets.DATABASE_URL }}
         run: |
           RESPONSE=$(curl -s \
             -H "Authorization: Bearer ${RENDER_API_KEY}" \
