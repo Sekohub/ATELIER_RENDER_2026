@@ -32,10 +32,22 @@ resource "render_web_service" "flask_app" {
 env_vars = {
   ENV = {
     value = "production"
-  }
-    DATABASE_URL = {
-      value = var.database_url
+   }
+  DATABASE_URL = {
+    value = var.database_url
+   }
+ }
+}
+
+resource "render_web_service" "adminer" {
+  name   = "adminer-${var.github_actor}"
+  plan   = "free"
+  region = "frankfurt"
+
+  runtime_source = {
+    image = {
+      image_url = "adminer"
+      tag       = "latest"
     }
   }
-
 }
